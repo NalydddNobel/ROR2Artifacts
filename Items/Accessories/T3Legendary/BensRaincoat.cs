@@ -13,11 +13,6 @@ namespace RiskOfTerrain.Items.Accessories.T3Legendary
 {
     public class BensRaincoat : ModAccessory
     {
-        public override bool IsLoadingEnabled(Mod mod)
-        {
-            return false;
-        }
-
         public override void SetStaticDefaults()
         {
             Item.ResearchUnlockCount = 1;

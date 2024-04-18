@@ -106,8 +106,7 @@ namespace RiskOfTerrain.Content.Elites
 
         public override bool CanRoll(NPC npc)
         {
-            //return !ServerConfig.Instance.MendingElitesDisable;
-            return false;
+            return !ServerConfig.Instance.MendingElitesDisable;
         }
 
         public override void OnBecomeElite(NPC npc)

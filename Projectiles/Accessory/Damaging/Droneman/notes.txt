@@ -1,0 +1,4 @@
+wings could change to second frame when speeding up, in ror they generally just
+move around randomly for no reason
+
+the gun rotates as much as it can to aim and is layered behind the handle

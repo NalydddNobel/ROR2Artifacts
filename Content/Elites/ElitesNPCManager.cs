@@ -56,6 +56,8 @@ namespace RiskOfTerrain.Content.Elites
                 NPCID.BloodCrawlerWall,
                 NPCID.DesertScorpionWalk,
                 NPCID.DesertScorpionWall,
+                NPCID.Lihzahrd,
+                NPCID.LihzahrdCrawler,
 
                 ModContent.NPCType<MalachiteUrchin>(),
             };

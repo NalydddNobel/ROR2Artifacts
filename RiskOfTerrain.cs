@@ -10,6 +10,7 @@ using System.IO;
 using Terraria;
 using Terraria.Audio;
 using Terraria.Chat;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -35,25 +36,27 @@ namespace RiskOfTerrain
             Instance = this;
             PriceModifiers = new List<(Func<bool>, float)>()
             {
-                (() => NPC.downedBoss1, 0.25f),
-                (() => NPC.downedBoss2, 0.5f),
-                (() => NPC.downedBoss3, 0.5f),
-                (() => NPC.downedQueenBee, 0.1f),
-                (() => NPC.downedSlimeKing, 0.1f),
-                (() => NPC.downedDeerclops, 0.1f),
-                (() => NPC.downedMechBossAny, 2f),
-                (() => NPC.downedMechBoss1, 0.5f),
-                (() => NPC.downedMechBoss2, 0.5f),
-                (() => NPC.downedMechBoss3, 0.5f),
-                (() => NPC.downedQueenSlime, 0.1f),
-                (() => NPC.downedPlantBoss, 4f),
-                (() => NPC.downedGolemBoss, 0.5f),
-                (() => NPC.downedFishron, 0.25f),
-                (() => NPC.downedEmpressOfLight, 0.25f),
-                (() => NPC.downedAncientCultist, 0.25f),
-                (() => NPC.downedGoblins, 0.1f),
-                (() => NPC.downedPirates, 0.1f),
-                (() => NPC.downedMartians, 0.25f),
+                //(() => NPC.savedAngler, 100f), ???
+                (() => NPC.downedBoss1, 0.25f), //a staple
+                (() => NPC.downedBoss2, 0.5f), //unlocks npc
+                (() => NPC.downedBoss3, 0.5f), //mandatory
+                (() => NPC.downedQueenBee, 0.1f), //unlocks npc
+                //(() => NPC.downedSlimeKing, 0.1f),
+                //(() => NPC.downedDeerclops, 0.1f),
+                (() => Main.hardMode, 2f), //wof
+                //(() => NPC.downedMechBoss1, 0.5f),
+                //(() => NPC.downedMechBoss2, 0.5f),
+                //(() => NPC.downedMechBoss3, 0.5f),
+                //(() => NPC.downedQueenSlime, 0.1f),
+                (() => NPC.downedPlantBoss, 4f), //planteras important
+                (() => NPC.downedGolemBoss, 0.5f), //impoteran
+                //(() => NPC.downedFishron, 0.25f),
+                //(() => NPC.downedEmpressOfLight, 0.25f),
+                (() => NPC.downedAncientCultist, 0.25f), //impotent
+                (() => NPC.downedGoblins, 0.1f), //soft mandatory
+                //(() => NPC.downedPirates, 0.1f),
+                //(() => NPC.downedMartians, 0.25f),
+                
             };
         }
 

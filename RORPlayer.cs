@@ -102,6 +102,7 @@ namespace RiskOfTerrain
         public bool hitByBlazerProj;
 
         public bool showMeatHook;
+        public bool dronemanOut;
 
         public int resDiscID;
 
@@ -561,6 +562,7 @@ namespace RiskOfTerrain
             FocusCrystal.HitNPCForMakingDamageNumberPurpleHack = null;
             SpawnHack = false;
             showMeatHook = false;
+            dronemanOut = false;
         }
 
         public override void ProcessTriggers(TriggersSet triggersSet)

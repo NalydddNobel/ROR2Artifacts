@@ -90,6 +90,10 @@ namespace RiskOfTerrain.NPCs
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BerzerkersPauldron>(), 5));
             }
+            if (npc.type == NPCID.MartianSaucerCore)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SpareDroneParts>(), 5));
+            }
         }
 
         public override void ModifyShop(NPCShop shop)

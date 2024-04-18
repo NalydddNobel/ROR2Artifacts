@@ -111,7 +111,7 @@ namespace RiskOfTerrain.Projectiles.Accessory.Damaging
             }
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             if (Main.player[Projectile.owner].ROR().accResonanceDisc)
             {

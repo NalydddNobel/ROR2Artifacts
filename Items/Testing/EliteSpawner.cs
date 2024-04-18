@@ -175,3 +175,13 @@ namespace RiskOfTerrain.Items.Testing
  * when you do the arti jump the other player sees you teleport
  * there are a bunch of "read underflow" errors that started popping up recently as a result of something i did which i cannot remember
 */
+
+/*GENERAL BUGS
+ * Sentient Meat Hook pulls SOTS advisor
+ * War Banner / Focus Crystal circles laggy on some pcs
+ - Mending elites do not spawn
+ * Blazing aspect self inflicts dmg? maybe mp
+ - Shits way too expensive to open chests
+ - Meat hook hooks Skeletron Prime
+ - roll of pennies uses item.newitem which doesnt work in mp and instead i should use player.quickspawnitem
+*/

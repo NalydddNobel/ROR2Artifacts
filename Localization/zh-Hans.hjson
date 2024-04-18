@@ -779,6 +779,16 @@ Mods: {
 				// DisplayName: Commando Legs
 				// Tooltip: +1 flat ranged damage
 			}
+
+			SpareDroneParts: {
+				// DisplayName: Spare Drone Parts
+				// Tooltip: ""
+			}
+
+			EngineerBubbleTest: {
+				// DisplayName: Engineer Bubble Test
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -858,6 +868,8 @@ Mods: {
 			// MendingElitesDisableTooltip: Mending elites will no longer spawn
 			// OverloadingElitesDisable: Disable Overloading Elites
 			// OverloadingElitesDisableTooltip: Overloading elites will no longer spawn
+			// ChestSpawnFrequency: Security Chest Spawn Frequency
+			// ChestSpawnFrequencyTooltip: Adjust the spawn rate of chests. May not produce visible effects at first.
 		}
 
 		BlazingElite: 炽热的
@@ -1096,6 +1108,9 @@ Mods: {
 			// EngineerTurretBullet.DisplayName: Engineer Turret Bullet
 			// FuelProj.DisplayName: Fuel Proj
 			// LightningEffectProj.DisplayName: Lightning Effect Proj
+			// DronemanHead.DisplayName: Droneman Head
+			// DronemanGun.DisplayName: Droneman Gun
+			// EngineerBubble.DisplayName: Engineer Bubble
 		}
 
 		Tiles: {
@@ -1191,6 +1206,11 @@ Mods: {
 				OverloadingElitesDisable: {
 					// Label: "{$Mods.RiskOfTerrain.Configuration.OverloadingElitesDisable}"
 					// Tooltip: "{$Mods.RiskOfTerrain.Configuration.OverloadingElitesDisableTooltip}"
+				}
+
+				ChestSpawnFrequency: {
+					// Label: "{$Mods.RiskOfTerrain.Configuration.ChestSpawnFrequency}"
+					// Tooltip: "{$Mods.RiskOfTerrain.Configuration.ChestSpawnFrequencyTooltip}"
 				}
 			}
 		}

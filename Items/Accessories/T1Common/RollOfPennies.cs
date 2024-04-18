@@ -27,20 +27,22 @@ namespace RiskOfTerrain.Items.Accessories.T1Common
             if (entity.entity is not Player && (!Main.expertMode || entity.entity is not NPC))
                 return;
 
-            int[] coins = Utils.CoinsSplit(25 * info.Damage);
-            var source = entity.entity.GetSource_FromThis();
-            var loc = entity.entity.Center;
-            if (coins[0] > 0)
-                Item.NewItem(source, loc, ItemID.CopperCoin, coins[0]);
+            if (attacker.entity is Player player)
+            {
+                int[] coins = Utils.CoinsSplit(25 * info.Damage);
+                var source = entity.entity.GetSource_FromThis();
+                if (coins[0] > 0)
+                    player.QuickSpawnItem(source, ItemID.CopperCoin, coins[0]);
 
-            if (coins[1] > 0)
-                Item.NewItem(source, loc, ItemID.SilverCoin, coins[1]);
+                if (coins[1] > 0)
+                    player.QuickSpawnItem(source, ItemID.SilverCoin, coins[1]);
 
-            if (coins[2] > 0)
-                Item.NewItem(source, loc, ItemID.GoldCoin, coins[2]);
+                if (coins[2] > 0)
+                    player.QuickSpawnItem(source, ItemID.GoldCoin, coins[2]);
 
-            if (coins[3] > 0)
-                Item.NewItem(source, loc, ItemID.PlatinumCoin, coins[3]);
+                if (coins[3] > 0)
+                    player.QuickSpawnItem(source, ItemID.PlatinumCoin, coins[3]);
+            }
         }
     }
 }

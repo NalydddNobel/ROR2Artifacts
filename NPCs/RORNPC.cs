@@ -69,6 +69,8 @@ namespace RiskOfTerrain.NPCs
 
         public bool warHornHasBeenHit { get; set; }
 
+        public bool isBossMinion = false;
+
         public override bool InstancePerEntity => true;
 
         public static List<EliteNPCBase> RegisteredElites { get; private set; }
@@ -266,6 +268,12 @@ namespace RiskOfTerrain.NPCs
         public override void OnSpawn(NPC npc, IEntitySource source)
         {
             convertToCursedFlames = false;
+
+            if (source is EntitySource_Parent parent && parent.Entity is NPC parentNPC && parentNPC.boss)
+            {
+                npc.ROR().isBossMinion = true;
+            }
+
         }
 
         public override bool PreAI(NPC npc)

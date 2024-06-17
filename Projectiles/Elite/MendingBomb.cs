@@ -58,7 +58,7 @@ namespace RiskOfTerrain.Projectiles.Elite
             Lighting.AddLight(Projectile.Center, new Vector3(1f, 0.95f, 0.85f) * Projectile.scale / 280f);
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             for (int i = 0; i < Main.maxPlayers; i++)
             {

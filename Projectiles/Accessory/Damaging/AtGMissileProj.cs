@@ -61,7 +61,7 @@ namespace RiskOfTerrain.Projectiles.Accessory.Damaging
             Projectile.velocity = Vector2.Lerp(Projectile.velocity, (closest.Center - Projectile.Center).SafeNormalize(Vector2.Zero) * 16f, Math.Clamp(0.01f + Projectile.ai[0] / 180f, 0f, 1f));
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             SoundEngine.PlaySound(RiskOfTerrain.GetSounds("missile/explode", 4, 0.5f, 0f, 0.1f), Projectile.Center);
 

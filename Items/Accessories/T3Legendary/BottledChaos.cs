@@ -87,7 +87,7 @@ namespace RiskOfTerrain.Items.Accessories.T3Legendary
             Projectile.alpha = Projectile.timeLeft;
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             for (int i = 0; i < 7; i++)
             {

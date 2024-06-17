@@ -116,7 +116,7 @@ namespace RiskOfTerrain.Items.CharacterSets.Artificer
             Lighting.AddLight(Projectile.Center, TorchID.Blue);
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             Projectile.NewProjectile(Projectile.GetSource_Death(), Projectile.Center,
                     Vector2.Zero, ModContent.ProjectileType<PlasmaBoltImpact>(), 10, 3f, Projectile.owner);
@@ -160,7 +160,7 @@ namespace RiskOfTerrain.Items.CharacterSets.Artificer
             }
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             SoundEngine.PlaySound(SoundID.Shatter.WithPitchOffset(Main.rand.NextFloat(-0.5f, 0.6f)));
 
@@ -217,7 +217,7 @@ namespace RiskOfTerrain.Items.CharacterSets.Artificer
             Lighting.AddLight(Projectile.Center, TorchID.Blue);
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             Projectile.NewProjectile(Projectile.GetSource_Death(), Projectile.Center,
                     Vector2.Zero, ModContent.ProjectileType<PlasmaBoltImpact>(), 40, 3f, Projectile.owner, 1);
@@ -264,7 +264,7 @@ namespace RiskOfTerrain.Items.CharacterSets.Artificer
             target.AddBuff(BuffID.OnFire, 180);
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             SoundStyle pvz = new SoundStyle();
             pvz.SoundPath = "RiskOfTerrain/Assets/Sounds/firepea";
@@ -419,7 +419,7 @@ namespace RiskOfTerrain.Items.CharacterSets.Artificer
             }
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             SoundStyle iceShatter = RiskOfTerrain.GetSounds("artishatter/mage_shift_wall_explode_ice_0", 4);
             iceShatter.PitchVariance = 0.5f;

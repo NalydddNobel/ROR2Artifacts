@@ -66,7 +66,7 @@ namespace RiskOfTerrain.Projectiles.Accessory.Damaging
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             SoundEngine.PlaySound(RiskOfTerrain.GetSounds("firework/explode", 7, 0.9f, 0f, 0.1f), Projectile.Center);
 

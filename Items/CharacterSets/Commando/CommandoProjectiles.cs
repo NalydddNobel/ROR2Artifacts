@@ -126,7 +126,7 @@ namespace RiskOfTerrain.Items.CharacterSets.Commando
             Projectile.rotation += Projectile.velocity.X * 0.1f;
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             Projectile.NewProjectile(Projectile.GetSource_Death(), Projectile.Center,
                     Vector2.Zero, ModContent.ProjectileType<GrenadeExplosion>(), 30, 10f, Projectile.owner);

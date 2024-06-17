@@ -67,7 +67,7 @@ namespace RiskOfTerrain.Projectiles.Accessory.Damaging
             }
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             var velo = Vector2.Zero;
             if (AttatchedNPC != -1)

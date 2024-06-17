@@ -276,7 +276,7 @@ namespace RiskOfTerrain.Projectiles.Accessory.Damaging
             }
         }
 
-        public override void Kill(int timeLeft) //death spiciness
+        public override void OnKill(int timeLeft) //death spiciness
         {
             SoundEngine.PlaySound(SoundID.NPCDeath6);
 

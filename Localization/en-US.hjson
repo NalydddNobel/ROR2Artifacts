@@ -1111,6 +1111,7 @@ Mods: {
 			DronemanHead.DisplayName: Droneman Head
 			DronemanGun.DisplayName: Droneman Gun
 			EngineerBubble.DisplayName: Engineer Bubble
+			ChestItemProjectile.DisplayName: Chest Item Projectile
 		}
 
 		Tiles: {
@@ -1127,6 +1128,12 @@ Mods: {
 			RustyLockboxTile: {
 				MapEntry: Rusty Lockbox
 				MapEntry_Locked: Rusty Lockbox
+			}
+
+			BasicChestLocked: {
+				MapEntry: Basic Chest Locked
+				ItemDisplayName: Mods.RiskOfTerrain.Tiles.BasicChestLocked.ItemDisplayName
+				ItemTooltip: ""
 			}
 		}
 

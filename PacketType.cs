@@ -1,10 +1,9 @@
-﻿namespace RiskOfTerrain
-{
-    public enum PacketType : byte
-    {
-        SyncRORNPC,
-        TougherTimesDodge,
-        SyncRORPlayer,
-        OnKillEffect,
-    }
+﻿namespace RiskOfTerrain;
+
+public enum PacketType : byte {
+    SyncRORNPC,
+    TougherTimesDodge,
+    SyncRORPlayer,
+    OnKillEffect,
+    OpenSecurityChest,
 }

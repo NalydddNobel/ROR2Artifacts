@@ -5,5 +5,5 @@ public enum PacketType : byte {
     TougherTimesDodge,
     SyncRORPlayer,
     OnKillEffect,
-    OpenSecurityChest,
+    UnlockSecurityChest,
 }

@@ -1135,6 +1135,16 @@ Mods: {
 				// ItemDisplayName: Mods.RiskOfTerrain.Tiles.BasicChestLocked.ItemDisplayName
 				// ItemTooltip: ""
 			}
+
+			BasicChest: {
+				MapEntry: {
+					// Locked: Mods.RiskOfTerrain.Tiles.BasicChest.MapEntry.Locked
+					// $parentVal: Basic Chest
+				}
+
+				// ItemDisplayName: Mods.RiskOfTerrain.Tiles.BasicChest.ItemDisplayName
+				// ItemTooltip: ""
+			}
 		}
 
 		Configs: {

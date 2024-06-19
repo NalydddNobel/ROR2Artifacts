@@ -20,11 +20,30 @@ public class ChestItemProjectile : ModProjectile {
         Projectile.tileCollide = false;
         Projectile.extraUpdates = 1;
         Projectile.timeLeft = 70 * Projectile.MaxUpdates;
+        Projectile.hide = true;
     }
 
     public override void AI() {
+        if (Projectile.ai[1] > 0f) {
+            if (Projectile.numUpdates == -1) {
+                Projectile.ai[1]--;
+            }
+
+            if (Projectile.ai[1] <= 0f) {
+                Projectile.velocity *= 100f;
+            }
+
+            Projectile.timeLeft++;
+            return;
+        }
+
+        Projectile.hide = false;
+
         if (Projectile.localAI[0] == 0f && Projectile.velocity.Y == 0f) {
-            Projectile.ai[0] = Main.rand.Next(ItemLoader.ItemCount);
+            if (Projectile.ai[0] <= 0f) {
+                Projectile.ai[0] = Main.rand.Next(ItemLoader.ItemCount);
+            }
+
             Projectile.velocity.Y = -4f;
             Projectile.velocity.X = Main.rand.NextFloat(0.5f, 1.5f) * (Main.rand.NextBool() ? -1 : 1);
             Projectile.netUpdate = true;
@@ -54,10 +73,11 @@ public class ChestItemProjectile : ModProjectile {
         }
 
         if (Main.netMode != NetmodeID.MultiplayerClient) {
-            int newItem = Item.NewItem(Projectile.GetSource_FromThis(), Projectile.Center, new Item((int)Projectile.ai[0]));
+            int newItem = Item.NewItem(Projectile.GetSource_FromThis(), Projectile.Center, new Item((int)Projectile.ai[0], (int)Projectile.ai[2], -1));
             Item item = Main.item[newItem];
             item.velocity = new Vector2(0f, -1f);
             item.GetGlobalItem<ChestItemGlobalItem>().FromChest = true;
+            item.noGrabDelay = 100;
 
             // TODO -- net sync
         }

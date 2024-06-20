@@ -1,6 +1,7 @@
 using RiskOfTerrain.Content.Accessories.Tier1;
 using RiskOfTerrain.Content.Accessories.Tier2;
 using RiskOfTerrain.Content.Accessories.Tier3;
+using RiskOfTerrain.Content.Accessories.Tier4;
 using RiskOfTerrain.Content.Accessories.Tier5;
 using RiskOfTerrain.Content.Accessories.Tier6;
 using RiskOfTerrain.Content.Accessories.Tier7;

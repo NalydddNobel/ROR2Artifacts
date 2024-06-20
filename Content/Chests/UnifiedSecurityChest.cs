@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using RiskOfTerrain.Common;
 using RiskOfTerrain.Common.ContentGen;
 using RiskOfTerrain.Tiles;
 using RiskOfTerrain.UI;
@@ -36,7 +35,7 @@ public abstract class UnifiedSecurityChest(Color MapColor, float PriceMultiplier
 
     public static float SecondsForNewlyOpenedChest => 6f;
     public static float ChestCloseAnimationLength => 0.7f;
-    public static float ChestAnimationLength => 1f;
+    public static float ChestAnimationLength => 1.3f;
 
     public static Dictionary<Point, float> _animations;
 
@@ -258,9 +257,9 @@ public abstract class UnifiedSecurityChest(Color MapColor, float PriceMultiplier
 
                     // millisecond timings.
                     frameNum = compareTime switch {
-                        < 0.1f => 1,
-                        < 0.4f => 2,
-                        < 0.5f => 3,
+                        < 0.09f => 1,
+                        < 0.35f => 2,
+                        < 0.55f => 3,
                         < 0.6f => 4,
                         _ => 5
                     };

@@ -57,7 +57,7 @@ public class ChestItemGlobalItem : GlobalItem {
 
         for (float f = 0f; f < MathHelper.TwoPi; f += MathHelper.PiOver2 + float.Epsilon) {
             Vector2 offset = (f + Main.GlobalTimeWrappedHourly).ToRotationVector2() * (MathF.Sin(Main.GlobalTimeWrappedHourly * 0.345f) * 2f + 4f);
-            spriteBatch.Draw(texture, drawCoordiantes + offset, frame, ItemRarity.GetColor(item.rare) * 0.5f, rotation, origin, scale, SpriteEffects.None, 0f);
+            spriteBatch.Draw(texture, drawCoordiantes + offset, frame, ItemRarity.GetColor(item.OriginalRarity) * 0.5f, rotation, origin, scale, SpriteEffects.None, 0f);
         }
 
         spriteBatch.End();

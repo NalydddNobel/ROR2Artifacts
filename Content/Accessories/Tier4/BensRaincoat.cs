@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RiskOfTerrain.Content.Accessories.Tier6;
+namespace RiskOfTerrain.Content.Accessories.Tier4;
 
 public class BensRaincoat : ModAccessory {
     public override void SetStaticDefaults() {

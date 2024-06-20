@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using RiskOfTerrain.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.GameContent.UI;
 using Terraria.ID;
@@ -10,6 +12,8 @@ namespace RiskOfTerrain.Content.Chests;
 
 public class ChestItemProjectile : ModProjectile {
     public override string Texture => RiskOfTerrain.BlankTexture;
+
+    public int Rarity => ContentSamples.ItemsByType[(int)Projectile.ai[0]].rare;
 
     public override void SetDefaults() {
         ProjectileID.Sets.TrailCacheLength[Type] = 20;
@@ -31,6 +35,15 @@ public class ChestItemProjectile : ModProjectile {
 
             if (Projectile.ai[1] <= 0f) {
                 Projectile.velocity *= 100f;
+                SoundStyle createSound = Rarity switch {
+                    >= ItemRarityID.LightPurple => Sounds.Get("chests/spawnt3"),
+                    >= ItemRarityID.Orange => Sounds.Get("chests/spawnt2"),
+                    _ => Sounds.Get("chests/spawnt1")
+                };
+
+                SoundEngine.PlaySound(createSound, Projectile.Center);
+
+                ROREffects.Shake.Set(2 + Rarity);
             }
 
             Projectile.timeLeft++;
@@ -71,6 +84,14 @@ public class ChestItemProjectile : ModProjectile {
             d.velocity = Main.rand.NextVector2Circular(5f, 5f);
             d.color = ItemRarity.GetColor(ContentSamples.ItemsByType[(int)Projectile.ai[0]].rare) with { A = 0 };
         }
+
+        SoundStyle landSound = Rarity switch {
+            >= ItemRarityID.LightPurple => Sounds.Get("chests/landt3"),
+            >= ItemRarityID.Orange => Sounds.Get("chests/landt2"),
+            _ => Sounds.Get("chests/landt1")
+        };
+
+        SoundEngine.PlaySound(landSound, Projectile.Center);
 
         if (Main.netMode != NetmodeID.MultiplayerClient) {
             int newItem = Item.NewItem(Projectile.GetSource_FromThis(), Projectile.Center, new Item((int)Projectile.ai[0], (int)Projectile.ai[2], -1));

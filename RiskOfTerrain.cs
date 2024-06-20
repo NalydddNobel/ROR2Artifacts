@@ -1,3 +1,5 @@
+global using RiskOfTerrain.Common.Utilities;
+
 using Microsoft.Xna.Framework;
 using RiskOfTerrain.Content;
 using RiskOfTerrain.Content.Accessories;

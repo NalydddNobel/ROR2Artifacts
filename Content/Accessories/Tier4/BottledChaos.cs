@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RiskOfTerrain.Content.Accessories.Tier6;
+namespace RiskOfTerrain.Content.Accessories.Tier4;
 
 public class BottledChaos : ModAccessory {
     public override void SetStaticDefaults() {

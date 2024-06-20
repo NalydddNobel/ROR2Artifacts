@@ -5,6 +5,7 @@ using RiskOfTerrain.Items;
 using System;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -13,6 +14,11 @@ using Terraria.Utilities;
 namespace RiskOfTerrain.Content.Chests;
 
 public class BasicChest() : UnifiedSecurityChest(Color.Blue) {
+    public readonly SoundStyle OpenSound = Sounds.Get("chests/open");
+
+    public static readonly int FirstItemDelay = 45;
+    public static readonly int NextItemDelay = 25;
+
     internal override void HoverLocked(int i, int j, Player localPlayer) {
         localPlayer.cursorItemIconEnabled = true;
         localPlayer.cursorItemIconID = ItemID.GoldCoin;
@@ -23,6 +29,12 @@ public class BasicChest() : UnifiedSecurityChest(Color.Blue) {
     }
 
     internal override void OnUnlock(int i, int j, Player localPlayer, UnifiedRandom RNG) {
+        SoundEngine.PlaySound(OpenSound, new Vector2(i, j) * 16f);
+
+        if (Main.netMode == NetmodeID.MultiplayerClient) {
+            return;
+        }
+
         IEntitySource source = new EntitySource_TileInteraction(localPlayer, i, j);
         Vector2 spawnCoordinates = new Vector2(i - (Main.tile[i, j].TileFrameX / 18) + 1f, j - (Main.tile[i, j].TileFrameY / 18) + 1.25f) * 16f;
 
@@ -34,7 +46,7 @@ public class BasicChest() : UnifiedSecurityChest(Color.Blue) {
         foreach ((int type, int stack) in GetDrops(i, j, RNG)) {
             Projectile.NewProjectile(source, spawnCoordinates, velocity / 100f, ModContent.ProjectileType<ChestItemProjectile>(), 0, 0f, Main.myPlayer,
                 ai0: type,
-                ai1: (amountSpawned * 15) + 40,
+                ai1: (amountSpawned * NextItemDelay) + FirstItemDelay,
                 ai2: stack);
 
             velocity.X += nextItemVelocityX;
@@ -48,6 +60,14 @@ public class BasicChest() : UnifiedSecurityChest(Color.Blue) {
             <= 0.20f => ChestDropInfo.RollChestItem(RORItem.RedTier, x, y, RNG),
             _ => ChestDropInfo.RollChestItem(RORItem.WhiteTier, x, y, RNG)
         };
+
+#if DEBUG
+        rolledItem = RNG.NextFloat(1f) switch {
+            <= 0.33f => ChestDropInfo.RollChestItem(RORItem.GreenTier, x, y, RNG),
+            <= 0.66f => ChestDropInfo.RollChestItem(RORItem.RedTier, x, y, RNG),
+            _ => ChestDropInfo.RollChestItem(RORItem.WhiteTier, x, y, RNG)
+        };
+#endif
 
         if (rolledItem != null) {
             yield return (rolledItem.ItemID, 1);

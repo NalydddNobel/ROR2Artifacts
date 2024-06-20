@@ -19,7 +19,7 @@ public class RejuvenationRack : ModAccessory {
         Item.width = 32;
         Item.height = 38;
         Item.accessory = true;
-        Item.rare = ItemRarityID.LightPurple;
+        Item.rare = ItemRarityID.LightRed;
         Item.value = Item.sellPrice(gold: 5);
     }
 

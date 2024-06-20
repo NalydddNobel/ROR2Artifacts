@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using RiskOfTerrain.Buffs;
-using RiskOfTerrain.Items.Accessories.Aspects;
+using RiskOfTerrain.Content.Elites.Aspects;
 using RiskOfTerrain.NPCs;
 using RiskOfTerrain.Projectiles.Elite;
 using Terraria;

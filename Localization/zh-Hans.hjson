@@ -789,6 +789,11 @@ Mods: {
 				// DisplayName: Engineer Bubble Test
 				// Tooltip: ""
 			}
+
+			CeremonialDagger: {
+				// DisplayName: Ceremonial Dagger
+				// Tooltip: ""
+			}
 		}
 
 		SetBonuses: {
@@ -1138,11 +1143,11 @@ Mods: {
 
 			BasicChest: {
 				MapEntry: {
-					// Locked: Mods.RiskOfTerrain.Tiles.BasicChest.MapEntry.Locked
-					// $parentVal: Basic Chest
+					// Locked: Locked Security Chest
+					// $parentVal: Security Chest
 				}
 
-				// ItemDisplayName: Mods.RiskOfTerrain.Tiles.BasicChest.ItemDisplayName
+				// ItemDisplayName: "{$BasicChest.MapEntry}"
 				// ItemTooltip: ""
 			}
 		}

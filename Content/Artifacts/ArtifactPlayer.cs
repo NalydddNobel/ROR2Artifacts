@@ -1,4 +1,4 @@
-﻿using RiskOfTerrain.Items.Artifacts;
+﻿using RiskOfTerrain.Content.Artifacts.Items;
 using Terraria;
 using Terraria.ModLoader;
 

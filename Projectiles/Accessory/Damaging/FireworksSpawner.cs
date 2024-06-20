@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using RiskOfTerrain.Content.Accessories;
-using RiskOfTerrain.Items.Accessories.T1Common;
+using RiskOfTerrain.Content.Accessories.Tier1;
 using Terraria;
 using Terraria.ModLoader;
 

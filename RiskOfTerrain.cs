@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using RiskOfTerrain.Content;
 using RiskOfTerrain.Content.Accessories;
-using RiskOfTerrain.Items.Accessories.T1Common;
+using RiskOfTerrain.Content.Accessories.Tier2;
 using RiskOfTerrain.NPCs;
 using System;
 using System.Collections.Generic;

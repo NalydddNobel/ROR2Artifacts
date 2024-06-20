@@ -2,7 +2,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RiskOfTerrain.Common;
+namespace RiskOfTerrain;
+
 public static class Helper {
     public static void CloneStaticDefaults(this ModTile modTile, int tileId) {
         CopyFromArr(Main.tileSpelunker);

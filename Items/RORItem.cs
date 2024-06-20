@@ -19,8 +19,10 @@ using Terraria.GameContent.Generation;
 using Terraria.Social;
 using Terraria.Utilities;
 using Terraria.WorldBuilding;
-using RiskOfTerrain.Items.Accessories.T2Uncommon;
-using RiskOfTerrain.Items.Accessories.T3Legendary;
+using RiskOfTerrain.Content.Accessories.Tier3;
+using RiskOfTerrain.Content.Accessories.Tier2;
+using RiskOfTerrain.Content.Accessories.Tier5;
+using RiskOfTerrain.Content.Accessories.Tier6;
 
 namespace RiskOfTerrain.Items
 {

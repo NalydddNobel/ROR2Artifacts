@@ -3,7 +3,6 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using RiskOfTerrain.Content.Accessories;
-using RiskOfTerrain.Items.Accessories;
 using Microsoft.Xna.Framework;
 using RiskOfTerrain.Graphics;
 using RiskOfTerrain.Items.CharacterSets.Artificer;

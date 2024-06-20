@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using RiskOfTerrain.Buffs;
-using RiskOfTerrain.Items.Accessories.T1Common;
+using RiskOfTerrain.Content.Accessories.Tier1;
 using System;
 using System.Collections.Generic;
 using Terraria;

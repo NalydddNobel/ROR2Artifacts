@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using RiskOfTerrain.Content.Accessories.Tier1;
 using RiskOfTerrain.Graphics.Primitives;
-using RiskOfTerrain.Items.Accessories.T1Common;
 using System;
 using Terraria;
 using Terraria.Audio;

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using RiskOfTerrain.Buffs;
-using RiskOfTerrain.Items.Accessories.Aspects;
+using RiskOfTerrain.Content.Elites.Aspects;
 using RiskOfTerrain.Projectiles.Elite;
 using Terraria;
 using Terraria.Graphics.Shaders;

@@ -1,8 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using RiskOfTerrain.Content.Chests.RustedLockbox;
+using RiskOfTerrain.Content.Items.Consumable;
 using RiskOfTerrain.Items;
-using RiskOfTerrain.Items.Consumable;
 using RiskOfTerrain.Items.Placeable;
 using RiskOfTerrain.UI;
 using Terraria;

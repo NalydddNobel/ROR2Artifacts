@@ -1,5 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
-using RiskOfTerrain.Items.Accessories.Aspects;
+using RiskOfTerrain.Content.Elites.Aspects;
 using System;
 using Terraria;
 using Terraria.Graphics.Shaders;

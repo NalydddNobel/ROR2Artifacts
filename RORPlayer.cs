@@ -3,11 +3,11 @@ using Microsoft.Xna.Framework.Graphics;
 using RiskOfTerrain.Buffs;
 using RiskOfTerrain.Buffs.Debuff;
 using RiskOfTerrain.Content.Accessories;
+using RiskOfTerrain.Content.Accessories.Tier2;
+using RiskOfTerrain.Content.Accessories.Tier5;
 using RiskOfTerrain.Content.Artifacts;
+using RiskOfTerrain.Content.Items.Consumable;
 using RiskOfTerrain.Graphics;
-using RiskOfTerrain.Items.Accessories.T1Common;
-using RiskOfTerrain.Items.Accessories.T2Uncommon;
-using RiskOfTerrain.Items.Consumable;
 using RiskOfTerrain.Projectiles.Accessory.Damaging;
 using RiskOfTerrain.Projectiles.Accessory.Utility;
 using RiskOfTerrain.Projectiles.Accessory.Visual;
@@ -25,8 +25,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
 
-namespace RiskOfTerrain
-{
+namespace RiskOfTerrain {
     public class RORPlayer : ModPlayer
     {
         public const int ShieldRegenerationTime = 300;

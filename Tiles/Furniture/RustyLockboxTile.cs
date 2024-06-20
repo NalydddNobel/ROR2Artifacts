@@ -1,9 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using RiskOfTerrain.Common;
+using RiskOfTerrain.Content.Chests.RustedLockbox;
 using RiskOfTerrain.Items;
-using RiskOfTerrain.Items.Consumable;
-using RiskOfTerrain.Items.Placeable;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
